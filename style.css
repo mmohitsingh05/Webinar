@@ -87,11 +87,13 @@ h1, h2, h3, .serif {
 /* Navigation */
 nav {
     position: fixed;
-    top: 0;
+    top: 42px; /* Perfect Offset for compact timer */
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
+    padding: 1rem 0; /* Reduced nav padding for alignment */
     transition: all 0.4s;
+    background: rgba(10, 13, 20, 0.7); /* Base background for alignment */
+    backdrop-filter: blur(15px);
 }
 
 nav.scrolled {
@@ -153,7 +155,9 @@ nav.scrolled {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle at center, rgba(123, 66, 255, 0.1) 0%, transparent 70%);
+    background: 
+        linear-gradient(to bottom, rgba(5, 7, 10, 0.8) 0%, rgba(5, 7, 10, 0.4) 50%, rgba(5, 7, 10, 0.9) 100%),
+        radial-gradient(circle at center, rgba(123, 66, 255, 0.15) 0%, transparent 70%);
 }
 
 .hero-video-bg {
@@ -169,7 +173,7 @@ nav.scrolled {
 
 .hero-content {
     max-width: 900px;
-    padding-top: 100px;
+    padding-top: 180px; /* Enhanced Gap for better visual breathing room */
 }
 
 .badge {
@@ -241,6 +245,14 @@ section {
     transition: all 0.4s;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1rem;
+    height: 100%;
+    min-height: 250px;
 }
 
 .bento-item:hover {
@@ -248,21 +260,24 @@ section {
     border-color: var(--primary-glow);
 }
 
-.bento-item i {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-    display: block;
-}
-
 .bento-item h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .bento-item p {
     color: var(--text-muted);
     font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.bento-item i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 /* Specific Bento Layout */
@@ -271,38 +286,43 @@ section {
 .col-4 { grid-column: span 4; }
 .col-6 { grid-column: span 6; }
 
-/* Counter */
+/* Compact Timer (Small Scale) */
 .countdown-shelf {
-    background: var(--bg-surface);
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
+    background: #000; /* Deep Black */
+    padding: 0.4rem 0;
+    height: 42px; /* Professional Thin Bar */
+    border-bottom: 2px solid var(--primary-glow);
+    position: fixed;
     top: 0;
-    z-index: 999;
-    display: none; /* Shown via JS */
+    width: 100%;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
 }
 
 .countdown-container {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+    width: 100%;
 }
 
 .timer-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Horizontal for compactness */
     align-items: center;
+    gap: 0.3rem;
 }
 
 .timer-val {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 800;
     color: var(--primary);
 }
 
 .timer-label {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     text-transform: uppercase;
     color: var(--text-muted);
 }
@@ -477,7 +497,7 @@ html {
     }
 
     .hero-content {
-        padding-top: 150px;
+        padding-top: 220px;
     }
 
     .bento-grid {
