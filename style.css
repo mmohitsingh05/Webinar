@@ -173,7 +173,7 @@ nav.scrolled {
 
 .hero-content {
     max-width: 900px;
-    padding-top: 160px; /* Balanced Clearance */
+    padding-top: 120px; /* Impactful and tight for Desktop */
 }
 
 .badge {
@@ -496,7 +496,7 @@ html {
 
     .hero { height: auto; min-height: 100vh; padding-bottom: 80px; }
     .hero-content {
-        padding-top: 160px; /* Perfectly balanced for mobile */
+        padding-top: 140px; /* Safe and clean for Mobile */
     }
 
     .about-grid {
@@ -536,7 +536,7 @@ html {
 
 @media (max-width: 480px) {
     .hero h1 { font-size: 2.2rem !important; }
-    .hero-content { padding-top: 140px; }
+    .hero-content { padding-top: 130px; }
     .btn { width: 100%; justify-content: center; }
     .nav-cta { display: none; } /* Hide nav btn on sub-480px to prevent logo overlap */
     nav { padding: 0.8rem 0; }
