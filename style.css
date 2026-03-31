@@ -499,6 +499,12 @@ html {
         padding-top: 140px; /* Safe and clean for Mobile */
     }
 
+    .badge {
+        font-size: 0.65rem !important;
+        letter-spacing: 1px !important;
+        padding: 0.4rem 1rem !important;
+    }
+
     .about-grid {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
