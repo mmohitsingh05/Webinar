@@ -173,7 +173,7 @@ nav.scrolled {
 
 .hero-content {
     max-width: 900px;
-    padding-top: 120px; /* Impactful and tight for Desktop */
+    padding-top: 160px; /* User-requested Desktop spacing */
 }
 
 .badge {
