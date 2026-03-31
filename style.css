@@ -116,6 +116,7 @@ nav.scrolled {
     text-transform: uppercase;
     letter-spacing: 3px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -290,7 +291,7 @@ section {
 .countdown-shelf {
     background: #000; /* Deep Black */
     padding: 0.4rem 0;
-    height: 42px; /* Professional Thin Bar */
+    min-height: 42px; /* Professional Thin Bar */
     border-bottom: 2px solid var(--primary-glow);
     position: fixed;
     top: 0;
@@ -298,6 +299,7 @@ section {
     z-index: 1001;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .countdown-container {
@@ -474,6 +476,7 @@ html {
     .container { padding: 0 1.5rem; }
     .hero-content { padding-top: 160px; }
     .hero h1 { font-size: 3.5rem !important; }
+    .logo { font-size: 1.2rem; letter-spacing: 2px; }
 }
 
 @media (max-width: 768px) {
@@ -500,10 +503,12 @@ html {
     }
 
     .badge {
-        font-size: 0.65rem !important;
-        letter-spacing: 1px !important;
-        padding: 0.4rem 1rem !important;
+        font-size: 0.6rem !important;
+        letter-spacing: 0.5px !important;
+        padding: 0.3rem 0.8rem !important;
     }
+    
+    .container { padding: 0 1rem; }
 
     .about-grid {
         grid-template-columns: 1fr !important;
@@ -530,10 +535,15 @@ html {
     }
 
     /* Timer Scaling */
-    .countdown-container { gap: 1rem; flex-wrap: wrap; }
-    .timer-val { font-size: 0.95rem; }
-    .timer-label { font-size: 0.5rem; }
+    .countdown-container { gap: 0.5rem; flex-wrap: nowrap; overflow-x: auto; justify-content: center; }
+    .timer-val { font-size: 0.85rem; }
+    .timer-label { font-size: 0.4rem; }
+    .timer-item { gap: 0.2rem; }
     .countdown-container > span { display: none; } /* Hide text on very small width */
+    
+    .logo { font-size: 1rem; letter-spacing: 1px; }
+    .nav-cta { padding: 0.5rem 1rem; font-size: 0.7rem; }
+    .menu-toggle { font-size: 1.2rem; }
 
     /* Final CTA Card */
     #register div { padding: 2.5rem 1.5rem !important; }

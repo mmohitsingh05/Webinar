@@ -14,7 +14,7 @@
 <body>
 
     <!-- 24-Hour Scarcity Timer (Hardcoded Visual) -->
-    <div id="sticky-timer" class="countdown-shelf" style="display: block; background: linear-gradient(to right, #1a1b41, #4b0082);">
+    <div id="sticky-timer" class="countdown-shelf" style="background: linear-gradient(to right, #1a1b41, #4b0082);">
         <div class="container countdown-container">
             <span style="font-size: 0.9rem; font-weight: 600; color: #fff;">⏳ 100% DISCOUNT ENDS IN:</span>
             <div class="timer-item">
@@ -260,7 +260,7 @@
         // Close menu when link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('remove');
+                navLinks.classList.remove('active');
             });
         });
 
