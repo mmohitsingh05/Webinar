@@ -173,7 +173,7 @@ nav.scrolled {
 
 .hero-content {
     max-width: 900px;
-    padding-top: 220px; /* Enhanced Desktop Gap */
+    padding-top: 160px; /* Balanced Clearance */
 }
 
 .badge {
@@ -496,12 +496,15 @@ html {
 
     .hero { height: auto; min-height: 100vh; padding-bottom: 80px; }
     .hero-content {
-        padding-top: 260px; /* Massive clearance for mobile fixed header */
+        padding-top: 160px; /* Perfectly balanced for mobile */
     }
-    .hero h1 { font-size: 2.6rem !important; margin-bottom: 1.5rem; }
-    .hero p { font-size: 1rem !important; margin-bottom: 2rem; }
 
-    .section-header h2 { font-size: 2.2rem; }
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: center;
+    }
+
     .bento-grid { 
         display: flex !important; 
         flex-direction: column !important; 
@@ -533,7 +536,7 @@ html {
 
 @media (max-width: 480px) {
     .hero h1 { font-size: 2.2rem !important; }
-    .hero-content { padding-top: 160px; }
+    .hero-content { padding-top: 140px; }
     .btn { width: 100%; justify-content: center; }
     .nav-cta { display: none; } /* Hide nav btn on sub-480px to prevent logo overlap */
     nav { padding: 0.8rem 0; }
